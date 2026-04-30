@@ -51,6 +51,7 @@ export default function Home() {
           overflow: "hidden",
         }}
       >
+        {/* Background circles */}
         <svg
           style={{ position: "absolute", inset: 0, pointerEvents: "none" }}
           viewBox="0 0 1200 400"
@@ -72,6 +73,7 @@ export default function Home() {
           />
         </svg>
 
+        {/* Avatar */}
         <div
           style={{
             width: "120px",
@@ -98,6 +100,7 @@ export default function Home() {
           />
         </div>
 
+        {/* Hero text */}
         <div style={{ position: "relative", zIndex: 1 }}>
           <p
             style={{
@@ -129,11 +132,12 @@ export default function Home() {
               maxWidth: "520px",
             }}
           >
-            Seasoned QA professional with 12+ years in automation and
+            Seasoned QA professional with 13+ years in automation and
             performance testing across Banking & Insurance. Expert in building
             frameworks, leading teams, and integrating cloud-based QA pipelines.
           </p>
 
+          {/* Badges */}
           <div
             style={{
               display: "flex",
@@ -179,6 +183,7 @@ export default function Home() {
             ))}
           </div>
 
+          {/* Stats */}
           <div
             style={{
               display: "flex",
@@ -188,7 +193,7 @@ export default function Home() {
             }}
           >
             {[
-              ["12+", "Years exp."],
+              ["13+", "Years exp."],
               ["5+", "Tools"],
               ["2", "Cloud platforms"],
             ].map(([num, lbl], i) => (
