@@ -1,3 +1,6 @@
+/* eslint-disable @next/next/no-img-element */
+import React from "react";
+
 export default function Home() {
   return (
     <main style={{ fontFamily: "Arial, sans-serif" }}>
