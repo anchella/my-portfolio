@@ -462,6 +462,130 @@ export default function Home() {
           </a>
         </div>
       </section>
+      {/* CLIENTS SECTION */}
+      <section
+        style={{
+          padding: "28px 32px",
+          borderBottom: "0.5px solid #d0e8f8",
+          background: "#EAF4FF",
+        }}
+      >
+        {/* CLIENTS SECTION */}
+        <section
+          style={{
+            padding: "28px 32px",
+            borderBottom: "0.5px solid #d0e8f8",
+            background: "#EAF4FF",
+          }}
+        >
+          <p
+            style={{
+              fontSize: "11px",
+              fontWeight: "500",
+              color: "#5b87b0",
+              textTransform: "uppercase",
+              letterSpacing: "0.08em",
+              marginBottom: "24px",
+              textAlign: "center",
+            }}
+          >
+            Companies I've Worked With
+          </p>
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              gap: "40px",
+              flexWrap: "wrap",
+            }}
+          >
+            {[
+              { src: "/capgemini.png", alt: "Capgemini" },
+              { src: "/sogeti.png", alt: "Sogeti" },
+            ].map((logo) => (
+              <div
+                key={logo.alt}
+                style={{
+                  background: "#fff",
+                  borderRadius: "12px",
+                  padding: "16px 24px",
+                  border: "0.5px solid #d0e8f8",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  width: "140px",
+                  height: "80px",
+                }}
+              >
+                <img
+                  src={logo.src}
+                  alt={logo.alt}
+                  style={{
+                    maxWidth: "100%",
+                    maxHeight: "100%",
+                    objectFit: "contain",
+                  }}
+                />
+              </div>
+            ))}
+          </div>
+        </section>
+        <p
+          style={{
+            fontSize: "11px",
+            fontWeight: "500",
+            color: "#5b87b0",
+            textTransform: "uppercase",
+            letterSpacing: "0.08em",
+            marginBottom: "24px",
+            textAlign: "center",
+          }}
+        >
+          Clients I've Worked With
+        </p>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            gap: "40px",
+            flexWrap: "wrap",
+          }}
+        >
+          {[
+            { src: "/zurich.png", alt: "Zurich" },
+            { src: "/rabo.jpg", alt: "Rabobank" },
+            { src: "/cbr.jpg", alt: "CBR" },
+            { src: "/abnamro.jpg", alt: "ABN AMRO" },
+          ].map((logo) => (
+            <div
+              key={logo.alt}
+              style={{
+                background: "#fff",
+                borderRadius: "12px",
+                padding: "16px 24px",
+                border: "0.5px solid #d0e8f8",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                width: "140px",
+                height: "80px",
+              }}
+            >
+              <img
+                src={logo.src}
+                alt={logo.alt}
+                style={{
+                  maxWidth: "100%",
+                  maxHeight: "100%",
+                  objectFit: "contain",
+                }}
+              />
+            </div>
+          ))}
+        </div>
+      </section>
     </main>
   );
 }
