@@ -4,8 +4,8 @@ export default function Home() {
   return (
     <main
       style={{
-        fontFamily: "Arial, sans-serif",
-        background: "#08090f",
+        fontFamily: "Georgia, serif",
+        background: "#fff",
         minHeight: "100vh",
       }}
     >
@@ -15,9 +15,9 @@ export default function Home() {
           display: "flex",
           justifyContent: "space-between",
           alignItems: "center",
-          padding: "18px 40px",
-          borderBottom: "0.5px solid #16213e",
-          background: "#08090f",
+          padding: "20px 48px",
+          borderBottom: "0.5px solid #e8e8e8",
+          background: "#fff",
           position: "sticky",
           top: 0,
           zIndex: 10,
@@ -25,41 +25,42 @@ export default function Home() {
       >
         <span
           style={{
-            fontSize: "15px",
-            fontWeight: "500",
-            color: "#fff",
-            letterSpacing: "0.04em",
+            fontFamily: "Georgia, serif",
+            fontSize: "16px",
+            color: "#1a1a1a",
+            letterSpacing: "0.02em",
           }}
         >
-          R. <span style={{ color: "#C8A96E" }}>Anchella</span>
+          Rajinikanth Anchella
         </span>
-        <div style={{ display: "flex", gap: "28px", alignItems: "center" }}>
-          {["About", "Skills", "Experience", "Clients", "Contact"].map(
-            (link) => (
-              <a
-                key={link}
-                href={`#${link.toLowerCase()}`}
-                style={{
-                  fontSize: "12px",
-                  color: "rgba(255,255,255,0.45)",
-                  textDecoration: "none",
-                }}
-              >
-                {link}
-              </a>
-            )
-          )}
+        <div style={{ display: "flex", gap: "32px", alignItems: "center" }}>
+          {["About", "Skills", "Experience", "Contact"].map((link) => (
+            <a
+              key={link}
+              href={`#${link.toLowerCase()}`}
+              style={{
+                fontSize: "12px",
+                color: "#888",
+                textDecoration: "none",
+                letterSpacing: "0.06em",
+                textTransform: "uppercase" as const,
+              }}
+            >
+              {link}
+            </a>
+          ))}
           <a
             href="/cv.pdf"
             target="_blank"
             style={{
               fontSize: "11px",
-              padding: "7px 18px",
-              borderRadius: "4px",
-              background: "#C8A96E",
-              color: "#08090f",
-              fontWeight: "500",
+              padding: "8px 20px",
+              border: "0.5px solid #1a1a1a",
+              color: "#1a1a1a",
+              letterSpacing: "0.06em",
+              textTransform: "uppercase" as const,
               textDecoration: "none",
+              background: "#fff",
             }}
           >
             Download CV
@@ -67,665 +68,420 @@ export default function Home() {
         </div>
       </nav>
 
-      {/* HERO */}
-      <section
+      {/* HERO PHOTO */}
+      <div
+        style={{
+          width: "100%",
+          height: "580px",
+          overflow: "hidden",
+          position: "relative",
+        }}
+      >
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src="/profile.jpg"
+          alt="Rajinikanth Anchella"
+          style={{
+            width: "100%",
+            height: "100%",
+            objectFit: "cover",
+            objectPosition: "center top",
+          }}
+        />
+        <div
+          style={{
+            position: "absolute",
+            bottom: 0,
+            left: 0,
+            right: 0,
+            padding: "40px 48px",
+            background: "linear-gradient(transparent, rgba(0,0,0,0.65))",
+          }}
+        >
+          <div
+            style={{
+              fontFamily: "Georgia, serif",
+              fontSize: "48px",
+              color: "#fff",
+              fontWeight: 400,
+              letterSpacing: "-0.01em",
+            }}
+          >
+            Rajinikanth Anchella
+          </div>
+          <div
+            style={{
+              fontSize: "12px",
+              color: "rgba(255,255,255,0.65)",
+              letterSpacing: "0.1em",
+              textTransform: "uppercase",
+              marginTop: "8px",
+            }}
+          >
+            Test Automation Expert &nbsp;·&nbsp; Sogeti, Part of Capgemini
+            &nbsp;·&nbsp; Lelystad, NL
+          </div>
+        </div>
+      </div>
+
+      {/* INTRO */}
+      <div
         id="about"
         style={{
           display: "grid",
           gridTemplateColumns: "1fr 1fr",
-          minHeight: "480px",
+          borderBottom: "0.5px solid #e8e8e8",
         }}
       >
-        {/* Left */}
-        <div
-          style={{
-            padding: "52px 40px",
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "center",
-            borderRight: "0.5px solid #16213e",
-          }}
-        >
+        <div style={{ padding: "48px", borderRight: "0.5px solid #e8e8e8" }}>
           <div
             style={{
               fontSize: "10px",
-              color: "#C8A96E",
-              letterSpacing: "0.14em",
-              textTransform: "uppercase",
-              marginBottom: "16px",
-              display: "flex",
-              alignItems: "center",
-              gap: "8px",
-            }}
-          >
-            <span
-              style={{
-                display: "block",
-                width: "24px",
-                height: "0.5px",
-                background: "#C8A96E",
-              }}
-            />
-            Current Employer :- Sogeti
-          </div>
-
-          <h1
-            style={{
-              fontSize: "38px",
-              fontWeight: "500",
-              color: "#fff",
-              lineHeight: 1.18,
-              marginBottom: "16px",
-            }}
-          >
-            Senior Test Automation Expert Delivering Reliable, Scalable Quality
-            Engineering Solutions
-          </h1>
-
-          <p
-            style={{
-              fontSize: "13px",
-              color: "rgba(255,255,255,0.45)",
-              lineHeight: 1.8,
-              marginBottom: "28px",
-              maxWidth: "360px",
-            }}
-          >
-            I am a Test Automation Expert with over 13 years of experience
-            building scalable QA solutions for leading financial institutions in
-            the Netherlands. From Selenium-driven automation to JMeter
-            performance testing and Azure DevOps pipelines, I turn complex
-            testing challenges into reliable, repeatable processes.
-          </p>
-
-          <div style={{ display: "flex", gap: "10px", marginBottom: "28px" }}>
-            <a
-              href="#experience"
-              style={{
-                fontSize: "12px",
-                padding: "10px 22px",
-                borderRadius: "4px",
-                background: "#C8A96E",
-                color: "#08090f",
-                fontWeight: "500",
-                textDecoration: "none",
-              }}
-            >
-              View Experience
-            </a>
-            <a
-              href="mailto:rajinikanth.anchella@gmail.com"
-              style={{
-                fontSize: "12px",
-                padding: "10px 22px",
-                borderRadius: "4px",
-                background: "transparent",
-                color: "rgba(255,255,255,0.6)",
-                border: "0.5px solid rgba(255,255,255,0.2)",
-                textDecoration: "none",
-              }}
-            >
-              Contact Me
-            </a>
-          </div>
-
-          <div
-            style={{
-              display: "flex",
-              alignItems: "center",
-              gap: "8px",
-              fontSize: "11px",
-              color: "rgba(255,255,255,0.4)",
-            }}
-          >
-            <div
-              style={{
-                width: "7px",
-                height: "7px",
-                borderRadius: "50%",
-                background: "#1D9E75",
-              }}
-            />
-            Ready to elevate your QA practice
-          </div>
-        </div>
-
-        {/* Right — Full photo */}
-        <div
-          style={{
-            position: "relative",
-            overflow: "hidden",
-            background: "#0d0f1a",
-            minHeight: "480px",
-          }}
-        >
-          <svg
-            style={{
-              position: "absolute",
-              inset: 0,
-              width: "100%",
-              height: "100%",
-              pointerEvents: "none",
-            }}
-            viewBox="0 0 400 480"
-            xmlns="http://www.w3.org/2000/svg"
-            preserveAspectRatio="xMidYMid slice"
-          >
-            {[60, 120, 180, 240, 300, 360, 420].map((y: number) => (
-              <line
-                key={`h${y}`}
-                x1="0"
-                y1={y}
-                x2="400"
-                y2={y}
-                stroke="#C8A96E"
-                strokeWidth="0.3"
-                opacity="0.15"
-              />
-            ))}
-            {[60, 120, 180, 240, 300, 360].map((x: number) => (
-              <line
-                key={`v${x}`}
-                x1={x}
-                y1="0"
-                x2={x}
-                y2="480"
-                stroke="#C8A96E"
-                strokeWidth="0.3"
-                opacity="0.15"
-              />
-            ))}
-            <circle
-              cx="200"
-              cy="240"
-              r="120"
-              fill="none"
-              stroke="#C8A96E"
-              strokeWidth="0.5"
-              opacity="0.12"
-            />
-            <circle
-              cx="200"
-              cy="240"
-              r="160"
-              fill="none"
-              stroke="#C8A96E"
-              strokeWidth="0.5"
-              opacity="0.08"
-            />
-          </svg>
-
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src="/profile.jpg"
-            alt="Rajinikanth Anchella"
-            style={{
-              position: "absolute",
-              inset: 0,
-              width: "100%",
-              height: "100%",
-              objectFit: "cover",
-              objectPosition: "center top",
-            }}
-          />
-
-          <div
-            style={{
-              position: "absolute",
-              bottom: "20px",
-              left: "16px",
-              background: "rgba(8,9,15,0.88)",
-              border: "0.5px solid #16213e",
-              borderRadius: "6px",
-              padding: "10px 14px",
-            }}
-          >
-            <div style={{ fontSize: "13px", fontWeight: "500", color: "#fff" }}>
-              Rajinikanth Anchella
-            </div>
-            <div
-              style={{ fontSize: "10px", color: "#C8A96E", marginTop: "2px" }}
-            >
-              Test Automation Expert · Lelystad, NL
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* STATS */}
-      <div
-        style={{
-          display: "grid",
-          gridTemplateColumns: "repeat(4, 1fr)",
-          borderTop: "0.5px solid #16213e",
-          borderBottom: "0.5px solid #16213e",
-        }}
-      >
-        {[
-          { num: "13", sup: "+", label: "Years experience" },
-          { num: "5", sup: "+", label: "Enterprise clients" },
-          { num: "10", sup: "+", label: "Tools mastered" },
-          { num: "3", sup: "+", label: "Certifications" },
-        ].map((s, i) => (
-          <div
-            key={s.label}
-            style={{
-              padding: "18px 24px",
-              textAlign: "center",
-              borderRight: i < 3 ? "0.5px solid #16213e" : "none",
-            }}
-          >
-            <div style={{ fontSize: "24px", fontWeight: "500", color: "#fff" }}>
-              {s.num}
-              <span style={{ fontSize: "14px", color: "#C8A96E" }}>
-                {s.sup}
-              </span>
-            </div>
-            <div
-              style={{
-                fontSize: "9px",
-                color: "rgba(255,255,255,0.3)",
-                textTransform: "uppercase",
-                letterSpacing: "0.1em",
-                marginTop: "3px",
-              }}
-            >
-              {s.label}
-            </div>
-          </div>
-        ))}
-      </div>
-
-      {/* SKILLS + CERTIFICATIONS */}
-      <div
-        id="skills"
-        style={{
-          display: "grid",
-          gridTemplateColumns: "1fr 1fr",
-          borderBottom: "0.5px solid #16213e",
-        }}
-      >
-        {/* Skills */}
-        <div
-          style={{ padding: "36px 40px", borderRight: "0.5px solid #16213e" }}
-        >
-          <div
-            style={{
-              fontSize: "9px",
-              color: "#C8A96E",
-              letterSpacing: "0.14em",
-              textTransform: "uppercase",
-              marginBottom: "12px",
-              display: "flex",
-              alignItems: "center",
-              gap: "8px",
-            }}
-          >
-            <span
-              style={{
-                display: "block",
-                width: "16px",
-                height: "0.5px",
-                background: "#C8A96E",
-              }}
-            />
-            Expertise
-          </div>
-          <div
-            style={{
-              fontSize: "18px",
-              fontWeight: "500",
-              color: "#fff",
+              color: "#888",
+              letterSpacing: "0.12em",
+              textTransform: "uppercase" as const,
               marginBottom: "20px",
             }}
           >
-            Core skills
+            About
           </div>
-          <div style={{ display: "flex", flexWrap: "wrap", gap: "6px" }}>
-            {[
-              { label: "Selenium WebDriver", gold: true },
-              { label: "Apache JMeter", gold: true },
-              { label: "Postman / Newman", gold: true },
-              { label: "NeoLoad", gold: true },
-              { label: "LoadRunner", gold: true },
-              { label: "HP UFT / QTP", gold: true },
-              { label: "BDD / Cucumber", gold: false },
-              { label: "Karate Framework", gold: false },
-              { label: "Robot Framework", gold: false },
-              { label: "Azure DevOps", gold: false },
-              { label: "AWS", gold: false },
-              { label: "Jenkins", gold: false },
-              { label: "Java", gold: false },
-              { label: "JavaScript", gold: false },
-              { label: "SQL", gold: false },
-              { label: "Git", gold: false },
-              { label: "Agile / Scrum", gold: false },
-              { label: "API Testing", gold: false },
-            ].map((s) => (
-              <span
-                key={s.label}
+          <p
+            style={{
+              fontFamily: "Georgia, serif",
+              fontSize: "16px",
+              color: "#1a1a1a",
+              lineHeight: 1.85,
+              marginBottom: "16px",
+            }}
+          >
+            I help financial institutions build scalable QA systems that reduce
+            release risk and accelerate delivery. With 13+ years of experience
+            across banking and insurance, I’ve designed automation and
+            performance testing solutions that improve reliability, streamline
+            testing cycles, and support high-volume enterprise systems. I also
+            lead QA transformation efforts—enabling Agile teams, mentoring
+            engineers, and implementing best practices that scale across
+            organizations.
+          </p>
+          <p
+            style={{
+              fontFamily: "Georgia, serif",
+              fontSize: "16px",
+              color: "#1a1a1a",
+              lineHeight: 1.85,
+            }}
+          >
+            Known for driving Agile practices within cross-functional Scrum
+            teams, I have led automation and performance testing initiatives,
+            trained teams for greater autonomy, and established best practices
+            that elevate quality across Banking & Insurance.
+          </p>
+        </div>
+        <div
+          style={{
+            padding: "48px",
+            display: "grid",
+            gridTemplateColumns: "1fr 1fr",
+            gap: "32px",
+            alignContent: "start",
+          }}
+        >
+          {[
+            { num: "13+", label: "Years experience" },
+            { num: "3+", label: "Enterprise clients" },
+            { num: "10+", label: "Tools mastered" },
+            { num: "3+", label: "Certifications" },
+          ].map((s) => (
+            <div key={s.label}>
+              <div
                 style={{
-                  fontSize: "11px",
-                  padding: "5px 12px",
-                  borderRadius: "3px",
-                  border: s.gold
-                    ? "0.5px solid rgba(200,169,110,0.4)"
-                    : "0.5px solid #16213e",
-                  color: s.gold ? "#C8A96E" : "rgba(255,255,255,0.5)",
-                  background: s.gold ? "rgba(200,169,110,0.08)" : "#0d0f1a",
+                  fontFamily: "Georgia, serif",
+                  fontSize: "40px",
+                  color: "#1a1a1a",
+                  fontWeight: 400,
+                }}
+              >
+                {s.num}
+              </div>
+              <div
+                style={{
+                  fontSize: "10px",
+                  color: "#888",
+                  letterSpacing: "0.1em",
+                  textTransform: "uppercase" as const,
+                  marginTop: "4px",
                 }}
               >
                 {s.label}
-              </span>
-            ))}
-          </div>
+              </div>
+            </div>
+          ))}
         </div>
+      </div>
 
-        {/* Certifications */}
-        <div style={{ padding: "36px 40px" }}>
-          <div
-            style={{
-              fontSize: "9px",
-              color: "#C8A96E",
-              letterSpacing: "0.14em",
-              textTransform: "uppercase",
-              marginBottom: "12px",
-              display: "flex",
-              alignItems: "center",
-              gap: "8px",
-            }}
-          >
+      {/* SKILLS */}
+      <div
+        id="skills"
+        style={{ padding: "48px", borderBottom: "0.5px solid #e8e8e8" }}
+      >
+        <div
+          style={{
+            fontSize: "10px",
+            color: "#888",
+            letterSpacing: "0.12em",
+            textTransform: "uppercase" as const,
+            marginBottom: "28px",
+          }}
+        >
+          Core Skills
+        </div>
+        <div style={{ display: "flex", flexWrap: "wrap", gap: "8px" }}>
+          {[
+            { label: "Selenium WebDriver", primary: true },
+            { label: "Apache JMeter", primary: true },
+            { label: "Postman / Newman", primary: true },
+            { label: "NeoLoad", primary: true },
+            { label: "LoadRunner", primary: true },
+            { label: "HP UFT / QTP", primary: true },
+            { label: "BDD / Cucumber", primary: true },
+            { label: "Karate Framework", primary: true },
+            { label: "Robot Framework", primary: true },
+            { label: "Azure DevOps", primary: true },
+            { label: "AWS", primary: true },
+            { label: "Jenkins", primary: true },
+            { label: "Java", primary: true },
+            { label: "JavaScript", primary: true },
+            { label: "SQL", primary: true },
+            { label: "Git", primary: true },
+            { label: "Agile / Scrum", primary: true },
+            { label: "API Testing", primary: true },
+          ].map((s) => (
             <span
+              key={s.label}
               style={{
-                display: "block",
-                width: "16px",
-                height: "0.5px",
-                background: "#C8A96E",
+                fontSize: "12px",
+                padding: "6px 14px",
+                border: s.primary ? "0.5px solid #1a1a1a" : "0.5px solid #ddd",
+                color: s.primary ? "#1a1a1a" : "#666",
+                letterSpacing: "0.04em",
+                fontFamily: "Arial, sans-serif",
+                fontWeight: s.primary ? 500 : 400,
               }}
-            />
-            Credentials
-          </div>
-          <div
-            style={{
-              fontSize: "18px",
-              fontWeight: "500",
-              color: "#fff",
-              marginBottom: "20px",
-            }}
-          >
-            Certifications
-          </div>
-          <div
-            style={{ display: "flex", flexDirection: "column", gap: "10px" }}
-          >
-            {[
-              "Microsoft Certified: Azure Fundamentals",
-              "ISTQB Certified Tester",
-              "Scrum.org Professional Scrum Master I",
-              "Tricentis Tosca Fundamentals (AS1)",
-            ].map((cert) => (
+            >
+              {s.label}
+            </span>
+          ))}
+        </div>
+      </div>
+
+      {/* CERTIFICATIONS */}
+      <div style={{ padding: "48px", borderBottom: "0.5px solid #e8e8e8" }}>
+        <div
+          style={{
+            fontSize: "10px",
+            color: "#888",
+            letterSpacing: "0.12em",
+            textTransform: "uppercase" as const,
+            marginBottom: "28px",
+          }}
+        >
+          Certifications
+        </div>
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(3, 1fr)",
+            gap: "16px",
+          }}
+        >
+          {[
+            "Microsoft Certified: Azure Fundamentals",
+            "ISTQB Certified Tester",
+            "Scrum.org Professional Scrum Master I",
+            "Tricentis Tosca Fundamentals (AS1)",
+          ].map((cert) => (
+            <div
+              key={cert}
+              style={{ display: "flex", gap: "10px", alignItems: "flex-start" }}
+            >
               <div
-                key={cert}
                 style={{
-                  display: "flex",
-                  gap: "10px",
-                  alignItems: "flex-start",
+                  width: "4px",
+                  height: "4px",
+                  borderRadius: "50%",
+                  background: "#C8A96E",
+                  marginTop: "7px",
+                  flexShrink: 0,
+                }}
+              />
+              <span
+                style={{
+                  fontFamily: "Arial, sans-serif",
+                  fontSize: "13px",
+                  color: "#444",
+                  lineHeight: 1.6,
                 }}
               >
-                <div
-                  style={{
-                    width: "4px",
-                    height: "4px",
-                    borderRadius: "50%",
-                    background: "#C8A96E",
-                    marginTop: "6px",
-                    flexShrink: 0,
-                  }}
-                />
-                <span
-                  style={{
-                    fontSize: "12px",
-                    color: "rgba(255,255,255,0.55)",
-                    lineHeight: 1.5,
-                  }}
-                >
-                  {cert}
-                </span>
-              </div>
-            ))}
-          </div>
+                {cert}
+              </span>
+            </div>
+          ))}
         </div>
       </div>
 
       {/* EXPERIENCE */}
       <div
         id="experience"
-        style={{ padding: "36px 40px", borderBottom: "0.5px solid #16213e" }}
+        style={{ padding: "48px", borderBottom: "0.5px solid #e8e8e8" }}
       >
         <div
           style={{
-            fontSize: "9px",
-            color: "#C8A96E",
-            letterSpacing: "0.14em",
-            textTransform: "uppercase",
-            marginBottom: "12px",
-            display: "flex",
-            alignItems: "center",
-            gap: "8px",
-          }}
-        >
-          <span
-            style={{
-              display: "block",
-              width: "16px",
-              height: "0.5px",
-              background: "#C8A96E",
-            }}
-          />
-          Career
-        </div>
-        <div
-          style={{
-            fontSize: "18px",
-            fontWeight: "500",
-            color: "#fff",
-            marginBottom: "24px",
+            fontSize: "10px",
+            color: "#888",
+            letterSpacing: "0.12em",
+            textTransform: "uppercase" as const,
+            marginBottom: "28px",
           }}
         >
           Experience
         </div>
-
-        <div style={{ display: "flex", flexDirection: "column", gap: "0px" }}>
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "1fr 1fr",
+            gap: "36px",
+          }}
+        >
           {[
             {
               role: "Performance Test Engineer",
               client: "CBR",
+              period: "Jan 2025 – May 2025",
               tags: ["JMeter", "LoadRunner", "Performance Testing"],
             },
             {
               role: "Lead Test Automation Consultant",
               client: "ABN AMRO",
-              tags: ["Selenium", "Postman", "NeoLoad", "AWS", "Azure DevOps"],
+              period: "Aug 2019 – Oct 2024",
+              tags: ["Selenium", "NeoLoad", "Azure DevOps", "AWS"],
             },
             {
               role: "Senior Test Automation Expert",
               client: "ABN AMRO",
-              tags: ["Git", "IBM MQ", "ISO 20022", "Leadership"],
+              period: "Sep 2018 – Jul 2019",
+              tags: ["IBM MQ", "ISO 20022", "Leadership"],
             },
             {
               role: "Senior Test Automation Engineer",
               client: "ABN AMRO",
-              tags: ["HP UFT", "VBScript", "Jenkins", "Tricentis Tosca"],
+              period: "Feb 2016 – Aug 2018",
+              tags: ["HP UFT", "VBScript", "Jenkins"],
             },
             {
               role: "Senior Agile Test Automation Consultant",
               client: "ABN AMRO",
-              tags: ["Selenium Grid", "Java", "BDD", "Cucumber"],
+              period: "Mar 2014 – Jul 2015",
+              tags: ["Selenium Grid", "Java", "BDD"],
             },
             {
               role: "Test Automation Engineer",
               client: "Zurich UK",
-              tags: ["HP UFT", "VBScript", "HP ALM", "SQL"],
+              period: "Jul 2012 – Feb 2014",
+              tags: ["HP UFT", "VBScript", "HP ALM"],
             },
-          ].map((e, i, arr) => (
-            <div
-              key={e.role + e.client}
-              style={{
-                display: "flex",
-                gap: "20px",
-                paddingBottom: i < arr.length - 1 ? "24px" : "0",
-                marginBottom: i < arr.length - 1 ? "24px" : "0",
-                borderBottom:
-                  i < arr.length - 1 ? "0.5px solid #16213e" : "none",
-              }}
-            >
-              {/* Timeline */}
+          ].map((e) => (
+            <div key={e.role + e.client}>
               <div
                 style={{
-                  display: "flex",
-                  flexDirection: "column",
-                  alignItems: "center",
-                  flexShrink: 0,
-                  width: "12px",
+                  fontSize: "11px",
+                  color: "#C8A96E",
+                  letterSpacing: "0.08em",
+                  textTransform: "uppercase" as const,
+                  marginBottom: "4px",
+                  fontFamily: "Arial, sans-serif",
                 }}
               >
-                <div
-                  style={{
-                    width: "10px",
-                    height: "10px",
-                    borderRadius: "50%",
-                    border: "1.5px solid #C8A96E",
-                    background: "#08090f",
-                    flexShrink: 0,
-                  }}
-                />
-                {i < arr.length - 1 && (
-                  <div
-                    style={{
-                      width: "1px",
-                      flex: 1,
-                      background: "#16213e",
-                      marginTop: "4px",
-                    }}
-                  />
-                )}
+                {e.client}
               </div>
-
-              {/* Content */}
-              <div style={{ flex: 1 }}>
-                <div
-                  style={{
-                    display: "flex",
-                    justifyContent: "space-between",
-                    alignItems: "flex-start",
-                    marginBottom: "4px",
-                  }}
-                >
-                  <div>
-                    <div
-                      style={{
-                        fontSize: "14px",
-                        fontWeight: "500",
-                        color: "#fff",
-                      }}
-                    >
-                      {e.role}
-                    </div>
-                    <div
-                      style={{
-                        fontSize: "12px",
-                        color: "#C8A96E",
-                        marginTop: "2px",
-                      }}
-                    >
-                      {e.client}
-                    </div>
-                  </div>
-                </div>
-
-                <div style={{ display: "flex", flexWrap: "wrap", gap: "5px" }}>
-                  {e.tags.map((tag) => (
-                    <span
-                      key={tag}
-                      style={{
-                        fontSize: "9px",
-                        padding: "2px 8px",
-                        borderRadius: "3px",
-                        background: "rgba(200,169,110,0.08)",
-                        color: "#C8A96E",
-                        border: "0.5px solid rgba(200,169,110,0.2)",
-                      }}
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
+              <div
+                style={{
+                  fontFamily: "Georgia, serif",
+                  fontSize: "16px",
+                  color: "#1a1a1a",
+                  marginBottom: "4px",
+                }}
+              >
+                {e.role}
+              </div>
+              <div
+                style={{
+                  fontSize: "11px",
+                  color: "#aaa",
+                  fontFamily: "Arial, sans-serif",
+                  marginBottom: "10px",
+                }}
+              >
+                {e.period}
+              </div>
+              <div style={{ display: "flex", flexWrap: "wrap", gap: "4px" }}>
+                {e.tags.map((tag) => (
+                  <span
+                    key={tag}
+                    style={{
+                      fontSize: "10px",
+                      padding: "2px 8px",
+                      border: "0.5px solid #e8e8e8",
+                      color: "#888",
+                      fontFamily: "Arial, sans-serif",
+                    }}
+                  >
+                    {tag}
+                  </span>
+                ))}
               </div>
             </div>
           ))}
         </div>
       </div>
 
-      {/* CLIENTS */}
-      {/* COMPANIES */}
-      <div
-        style={{ padding: "36px 40px", borderBottom: "0.5px solid #16213e" }}
-      >
+      {/* COMPANIES & CLIENTS */}
+      <div style={{ padding: "48px", borderBottom: "0.5px solid #e8e8e8" }}>
         <div
           style={{
-            fontSize: "9px",
-            color: "#C8A96E",
-            letterSpacing: "0.14em",
-            textTransform: "uppercase",
-            marginBottom: "12px",
-            display: "flex",
-            alignItems: "center",
-            gap: "8px",
+            fontSize: "10px",
+            color: "#888",
+            letterSpacing: "0.12em",
+            textTransform: "uppercase" as const,
+            marginBottom: "28px",
           }}
         >
-          <span
-            style={{
-              display: "block",
-              width: "16px",
-              height: "0.5px",
-              background: "#C8A96E",
-            }}
-          />
-          Employer
-        </div>
-        <div
-          style={{
-            fontSize: "18px",
-            fontWeight: "500",
-            color: "#fff",
-            marginBottom: "20px",
-          }}
-        >
-          Companies I've worked for
+          Companies & Clients
         </div>
         <div
           style={{
             display: "grid",
-            gridTemplateColumns: "repeat(2, 1fr)",
-            gap: "12px",
-            maxWidth: "400px",
+            gridTemplateColumns: "repeat(6, 1fr)",
+            gap: "16px",
+            alignItems: "center",
           }}
         >
           {[
             { src: "/capgemini.png", alt: "Capgemini" },
             { src: "/sogeti.png", alt: "Sogeti" },
+            { src: "/abnamro.jpg", alt: "ABN AMRO" },
+            { src: "/zurich.png", alt: "Zurich" },
+            { src: "/rabo.jpg", alt: "Rabobank" },
+            { src: "/cbr.jpg", alt: "CBR" },
           ].map((logo) => (
             <div
               key={logo.alt}
               style={{
-                background: "#ffffff",
-                border: "0.5px solid #C8A96E",
-                borderRadius: "8px",
-                height: "80px",
+                height: "64px",
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
-                padding: "16px",
+                border: "0.5px solid #e8e8e8",
+                padding: "12px",
               }}
             >
               {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -734,10 +490,8 @@ export default function Home() {
                 alt={logo.alt}
                 style={{
                   maxWidth: "100%",
-                  maxHeight: "40px",
+                  maxHeight: "36px",
                   objectFit: "contain",
-                  filter: "none",
-                  opacity: 1,
                 }}
               />
             </div>
@@ -745,133 +499,40 @@ export default function Home() {
         </div>
       </div>
 
-      {/* CLIENTS */}
-      <div
-        id="clients"
-        style={{ padding: "36px 40px", borderBottom: "0.5px solid #16213e" }}
-      >
-        <div
-          style={{
-            fontSize: "9px",
-            color: "#C8A96E",
-            letterSpacing: "0.14em",
-            textTransform: "uppercase",
-            marginBottom: "12px",
-            display: "flex",
-            alignItems: "center",
-            gap: "8px",
-          }}
-        >
-          <span
-            style={{
-              display: "block",
-              width: "16px",
-              height: "0.5px",
-              background: "#C8A96E",
-            }}
-          />
-          Clients
-        </div>
-        <div
-          style={{
-            fontSize: "18px",
-            fontWeight: "500",
-            color: "#fff",
-            marginBottom: "20px",
-          }}
-        >
-          Clients I've worked with
-        </div>
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(4, 1fr)",
-            gap: "12px",
-          }}
-        >
-          {[
-            { src: "/zurich.png", alt: "Zurich" },
-            { src: "/rabo.jpg", alt: "Rabobank" },
-            { src: "/cbr.jpg", alt: "CBR" },
-            { src: "/abnamro.jpg", alt: "ABN AMRO" },
-          ].map((logo) => (
-            <div
-              key={logo.alt}
-              style={{
-                background: "#ffffff",
-                border: "0.5px solid #C8A96E",
-                borderRadius: "8px",
-                height: "80px",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                padding: "16px",
-              }}
-            >
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src={logo.src}
-                alt={logo.alt}
-                style={{
-                  maxWidth: "100%",
-                  maxHeight: "40px",
-                  objectFit: "contain",
-                  filter: "none",
-                  opacity: 1,
-                }}
-              />
-            </div>
-          ))}
-        </div>
-      </div>
       {/* CONTACT */}
       <div
         id="contact"
         style={{ display: "grid", gridTemplateColumns: "1fr 1fr" }}
       >
-        <div
-          style={{ padding: "36px 40px", borderRight: "0.5px solid #16213e" }}
-        >
+        <div style={{ padding: "48px", borderRight: "0.5px solid #e8e8e8" }}>
           <div
             style={{
-              fontSize: "9px",
-              color: "#C8A96E",
-              letterSpacing: "0.14em",
-              textTransform: "uppercase",
-              marginBottom: "12px",
-              display: "flex",
-              alignItems: "center",
-              gap: "8px",
+              fontSize: "10px",
+              color: "#888",
+              letterSpacing: "0.12em",
+              textTransform: "uppercase" as const,
+              marginBottom: "20px",
             }}
           >
-            <span
-              style={{
-                display: "block",
-                width: "16px",
-                height: "0.5px",
-                background: "#C8A96E",
-              }}
-            />
             Contact
           </div>
           <div
             style={{
-              fontSize: "22px",
-              fontWeight: "500",
-              color: "#fff",
+              fontFamily: "Georgia, serif",
+              fontSize: "28px",
+              color: "#1a1a1a",
               lineHeight: 1.3,
-              marginBottom: "10px",
+              marginBottom: "16px",
             }}
           >
-            Let's build
-            <br />
-            quality together.
+            Let's build quality together.
           </div>
           <p
             style={{
-              fontSize: "12px",
-              color: "rgba(255,255,255,0.35)",
-              lineHeight: 1.7,
+              fontFamily: "Arial, sans-serif",
+              fontSize: "13px",
+              color: "#888",
+              lineHeight: 1.8,
             }}
           >
             Open to QA consulting, automation leadership, and performance
@@ -879,15 +540,7 @@ export default function Home() {
             and beyond.
           </p>
         </div>
-
-        <div
-          style={{
-            padding: "36px 40px",
-            display: "flex",
-            flexDirection: "column",
-            gap: "10px",
-          }}
-        >
+        <div style={{ padding: "48px" }}>
           {[
             {
               label: "LinkedIn",
@@ -905,38 +558,41 @@ export default function Home() {
               href: "https://github.com/anchella",
             },
             { label: "Resume", val: "Download CV — PDF", href: "/cv.pdf" },
-          ].map((c) => (
+          ].map((c, i, arr) => (
             <a
               key={c.label}
               href={c.href}
               target="_blank"
               style={{
                 display: "flex",
+                justifyContent: "space-between",
                 alignItems: "center",
-                gap: "10px",
-                padding: "12px 14px",
-                border: "0.5px solid #16213e",
-                borderRadius: "4px",
-                background: "#0d0f1a",
+                padding: "16px 0",
+                borderBottom:
+                  i < arr.length - 1 ? "0.5px solid #e8e8e8" : "none",
                 textDecoration: "none",
               }}
             >
-              <div>
-                <div
-                  style={{ fontSize: "12px", color: "rgba(255,255,255,0.6)" }}
-                >
-                  {c.label}
-                </div>
-                <div
-                  style={{
-                    fontSize: "11px",
-                    color: "#C8A96E",
-                    marginTop: "1px",
-                  }}
-                >
-                  {c.val}
-                </div>
-              </div>
+              <span
+                style={{
+                  fontSize: "11px",
+                  color: "#888",
+                  letterSpacing: "0.08em",
+                  textTransform: "uppercase" as const,
+                  fontFamily: "Arial, sans-serif",
+                }}
+              >
+                {c.label}
+              </span>
+              <span
+                style={{
+                  fontSize: "13px",
+                  color: "#1a1a1a",
+                  fontFamily: "Arial, sans-serif",
+                }}
+              >
+                {c.val}
+              </span>
             </a>
           ))}
         </div>
@@ -945,18 +601,33 @@ export default function Home() {
       {/* FOOTER */}
       <div
         style={{
-          padding: "16px 40px",
-          borderTop: "0.5px solid #16213e",
+          padding: "20px 48px",
+          borderTop: "0.5px solid #e8e8e8",
           display: "flex",
           justifyContent: "space-between",
           alignItems: "center",
         }}
       >
-        <span style={{ fontSize: "10px", color: "rgba(255,255,255,0.2)" }}>
-          © 2026 Rajinikanth Anchella · Test Automation Expert · Sogeti part of
-          Capgemini
+        <span
+          style={{
+            fontSize: "10px",
+            color: "#aaa",
+            letterSpacing: "0.06em",
+            textTransform: "uppercase" as const,
+            fontFamily: "Arial, sans-serif",
+          }}
+        >
+          © 2026 Rajinikanth Anchella
         </span>
-        <span style={{ fontSize: "10px", color: "rgba(255,255,255,0.2)" }}>
+        <span
+          style={{
+            fontSize: "10px",
+            color: "#aaa",
+            letterSpacing: "0.06em",
+            textTransform: "uppercase" as const,
+            fontFamily: "Arial, sans-serif",
+          }}
+        >
           rajinikanthanchella.com
         </span>
       </div>
