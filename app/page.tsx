@@ -569,7 +569,7 @@ export default function Home() {
             },
           ].map((e, i, arr) => (
             <div
-              key={e.role + e.period}
+              key={e.role + e.client}
               style={{
                 display: "flex",
                 gap: "20px",
