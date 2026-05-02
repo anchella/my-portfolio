@@ -641,27 +641,8 @@ export default function Home() {
                       {e.client}
                     </div>
                   </div>
-                  <div
-                    style={{
-                      fontSize: "10px",
-                      color: "rgba(255,255,255,0.3)",
-                      flexShrink: 0,
-                      marginLeft: "16px",
-                    }}
-                  >
-                    {e.period}
-                  </div>
                 </div>
-                <p
-                  style={{
-                    fontSize: "12px",
-                    color: "rgba(255,255,255,0.4)",
-                    lineHeight: 1.7,
-                    margin: "8px 0",
-                  }}
-                >
-                  {e.desc}
-                </p>
+
                 <div style={{ display: "flex", flexWrap: "wrap", gap: "5px" }}>
                   {e.tags.map((tag) => (
                     <span
